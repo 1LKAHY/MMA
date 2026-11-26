@@ -1,0 +1,2 @@
+import {readFileSync} from 'node:fs';import {Script} from 'node:vm';import assert from 'node:assert/strict';
+const html=readFileSync('dist/index.html','utf8');assert(!html.includes('__MMA_CONFIG__'));assert(html.includes('mma_submit'));assert(html.includes('mma_read'));assert(html.includes('s.roles.length>=4'));for(const m of html.matchAll(/<script>([\s\S]*?)<\/script>/g))new Script(m[1]);console.log('Build and syntax checks passed');

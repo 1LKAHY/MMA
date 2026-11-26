@@ -1,0 +1,1 @@
+{"name":"mma-awards","private":true,"type":"module","scripts":{"build":"node scripts/build.mjs","test":"node scripts/test.mjs"},"engines":{"node":">=22"}}
